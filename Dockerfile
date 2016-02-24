@@ -36,3 +36,6 @@ RUN mkdir -p tmp && cd /tmp && \
   rm -rf /tmp/ruby-2.3.0
 
 RUN gem install --no-rdoc --no-ri bundler
+
+# clean up crap in /tmp to reduce size
+RUN rm -rf /tmp/*
